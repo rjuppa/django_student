@@ -30,7 +30,7 @@ class Student(models.Model):
     It belongs to one classroom
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    classroom = models.ForeignKey(Classroom, on_delete=models.CASCADE)
+    classroom = models.ForeignKey(Classroom, related_name='students', on_delete=models.CASCADE)
     comment = models.CharField(max_length=255)
     created = models.DateTimeField(auto_created=True)
 

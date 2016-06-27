@@ -1,0 +1,32 @@
+
+<div class="col-md-4 col-sm-5 col-sx-6">
+    <div class="leftside">
+        <div>
+            <span class="h5">All Classrooms</span>&nbsp;
+        </div>
+        <div ng-repeat="classroom in classrooms | filter:query">
+
+              <div ng-click="showDetails(classroom)"
+                   class="divitem"
+                   ng-class="{item_selected: classroom.name === selectedClassroom.name}">
+                <h4>{{classroom.name}}</h4>
+              </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4 col-sm-5 col-sx-6" ng-if="showClassroom">
+    <div class="student-side">
+        <div>
+            <span class="h5">Students in classroom: {{ selectedClassroom.name }}</span>&nbsp;
+        </div>
+        <div ng-repeat="student in selectedClassroom.students">
+
+              <div class="divitem">
+                <h4>{{student.user.first_name}} {{student.user.last_name}}</h4>
+              </div>
+
+        </div>
+    </div>
+</div>

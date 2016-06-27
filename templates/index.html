@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Student in classroom</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/css/bootstrap.css">
+  <link rel="stylesheet" href="/static/css/app.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+
+            <div class="collapse navbar-collapse" id="collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="#/about">About</a></li>
+                    <li><a href="#/classrooms">Classrooms</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row" ng-view></div>
+    </div>
+
+    <script src="/static/app/node_modules/angular/angular.js"></script>
+    <script src="/static/app/node_modules/angular-resource/angular-resource.js"></script>
+    <script src="/static/app/node_modules/angular-route/angular-route.js"></script>
+    <script src="/static/app/node_modules/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/static/app/classrooms/list.js"></script>
+    <script src="/static/app/about/about.js"></script>
+    <script src="/static/app/app.js"></script>
+</body>
+</html>
